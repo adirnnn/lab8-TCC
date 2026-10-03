@@ -102,7 +102,8 @@ def perfil_cprofile(funcion, n, lineas=15):
         funcion(n)
         perfil.disable()
     buffer = io.StringIO()
-    pstats.Stats(perfil, stream=buffer).sort_stats("cumulative").print_stats(lineas)
+    # strip_dirs quita las rutas completas de los archivos para que el reporte se lea mas limpio
+    pstats.Stats(perfil, stream=buffer).strip_dirs().sort_stats("cumulative").print_stats(lineas)
     return buffer.getvalue()
 
 

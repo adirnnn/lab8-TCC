@@ -72,7 +72,8 @@ Requisitos: Python 3.10 o mas nuevo.
 - **cProfile:** ademas se corre una vez con `cProfile` para ver en que se va el tiempo y cuantas
   veces se llama cada cosa. En los problemas 2 y 3 el numero de llamadas a `print` que reporta
   cProfile coincide exacto con el conteo teorico (10,000 y 8,332,500). La tabla no se saca con
-  cProfile porque el profiler le agrega overhead a cada llamada.
+  cProfile porque con el profiler activo python corre mas lento (por ejemplo, el problema 1 con
+  n = 1,000 tarda 0.41 s con cProfile contra 0.094 s sin el).
 - **Salida a devnull:** el `printf("Sequence\n")` se traduce a `print("Sequence")`, pero durante la
   medicion la salida se manda a `os.devnull`. El `print` se ejecuta completo, solo que no se
   dibuja en la terminal; si no, se estaria midiendo que tan rapida es la consola y no el algoritmo.

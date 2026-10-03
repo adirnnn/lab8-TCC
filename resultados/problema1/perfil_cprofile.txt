@@ -4,7 +4,7 @@ reporte de cProfile para problema1 con n = 1000
    Ordered by: cumulative time
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.413    0.413    0.413    0.413 C:\Users\28adr\Documents\Ciclo8\TeoriaCC\Lab8TCC\src\problema1.py:31(funcion)
+        1    0.413    0.413    0.413    0.413 problema1.py:31(funcion)
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 
 
