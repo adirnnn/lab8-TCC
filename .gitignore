@@ -1,0 +1,12 @@
+# cosas de python que no hace falta subir
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# cosas del sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
