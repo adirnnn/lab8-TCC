@@ -110,6 +110,17 @@ def perfil_cprofile(funcion, n, lineas=15):
 # formato
 # ---------------------------------------------------------------------------
 
+def nombre_sistema():
+    """
+    nombre del sistema operativo para poner en la tabla.
+    ojo: platform.release() dice "10" aunque sea windows 11, la unica forma
+    de distinguirlos es el numero de build (windows 11 empieza en el 22000).
+    """
+    if platform.system() == "Windows" and sys.getwindowsversion().build >= 22000:
+        return "Windows 11"
+    return f"{platform.system()} {platform.release()}"
+
+
 def tiempo_legible(segundos):
     """pasa segundos a algo que se entienda rapido (us, ms, s, min, h, dias, anios)."""
     if segundos < 1e-3:
@@ -272,7 +283,7 @@ def main_problema(nombre, titulo, funcion, contar_operaciones, n_perfil):
     carpeta.mkdir(parents=True, exist_ok=True)
 
     print(f"== {nombre} ==")
-    print(f"python {platform.python_version()} en {platform.system()} {platform.release()}")
+    print(f"python {platform.python_version()} en {nombre_sistema()}")
     filas = correr_experimento(funcion, contar_operaciones, args.valores, args.limite)
 
     # reporte de cProfile
@@ -286,7 +297,7 @@ def main_problema(nombre, titulo, funcion, contar_operaciones, n_perfil):
     guardar_csv(filas, carpeta / "tabla.csv")
     (carpeta / "tabla.md").write_text(
         f"# {titulo}\n\n"
-        f"python {platform.python_version()}, {platform.system()} {platform.release()}, "
+        f"python {platform.python_version()}, {nombre_sistema()}, "
         f"{platform.processor() or platform.machine()}\n\n"
         f"limite por corrida: {args.limite:g} s\n\n{tabla}\n",
         encoding="utf-8")
