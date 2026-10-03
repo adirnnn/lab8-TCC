@@ -1,0 +1,13 @@
+reporte de cProfile para problema2 con n = 10000
+         50002 function calls in 0.035 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.005    0.005    0.035    0.035 C:\Users\28adr\Documents\Ciclo8\TeoriaCC\Lab8TCC\src\problema2.py:32(funcion)
+    10000    0.020    0.000    0.030    0.000 {built-in method builtins.print}
+    20000    0.006    0.000    0.010    0.000 C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py:18(encode)
+    20000    0.004    0.000    0.004    0.000 {built-in method _codecs.charmap_encode}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
