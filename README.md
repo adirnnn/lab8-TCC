@@ -4,9 +4,20 @@ Analisis de complejidad (Big-O) y profiling de los programas de los problemas 1,
 Los programas originales estan en C; aqui se implementaron en **Python** (traduccion directa,
 linea por linea) y se midio su tiempo de ejecucion con `n = 1, 10, 100, 1000, 10000, 100000, 1000000`.
 
+## Respuestas de los ejercicios sin codigo
+
+Las respuestas de los ejercicios que no llevan codigo estan en el pdf
+**[respuestas/lab8resp.pdf](respuestas/lab8resp.pdf)**:
+
+- Problemas 1, 2 y 3, parte a: complejidad Big-O con todo el procedimiento
+- Problema 4: mejor caso, caso promedio y peor caso de busqueda lineal, busqueda binaria y quick sort
+- Problema 5: verdadero o falso con su justificacion
+
+La parte b de los problemas 1, 2 y 3 (implementacion y profiling) esta en el codigo de este repo y en la seccion de [Resultados](#resultados).
+
 ## Video
 
-Video de la ejecucion (no listado en YouTube): **[pendiente - agregar link aqui]**
+Video de la ejecucion (no listado en YouTube): **https://youtu.be/Yvs3zOlXu6E**
 
 ## Estructura del repo
 
@@ -25,7 +36,8 @@ Video de la ejecucion (no listado en YouTube): **[pendiente - agregar link aqui]
 │       ├── tabla.csv           # la misma tabla en csv
 │       ├── grafica.png         # grafica tamano de input vs tiempo
 │       └── perfil_cprofile.txt # reporte de cProfile
-├── respuestas/          # respuestas de los ejercicios sin codigo (pdf)
+├── respuestas/
+│   └── lab8resp.pdf     # respuestas de los ejercicios sin codigo
 └── requirements.txt
 ```
 
